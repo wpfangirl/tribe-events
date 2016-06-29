@@ -1,0 +1,43 @@
+/* Events Calendar Pro Styles */
+
+.tribe-events-single ul.tribe-related-events .tribe-related-events-title,
+.tribe-events-single ul.tribe-related-events .tribe-related-events-title a {
+  font-size:18px;
+  font-family: 'Open Sans Condensed', Lato, Helvetica, sans-serif;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.tribe-events-single ul.tribe-related-events li {
+	width: 30.666%;
+	font-size:14px;
+}
+.tribe-events-single ul.tribe-related-events li:last-child {
+	margin-right:0;
+}
+
+#tribe-events-photo-events .type-tribe_events.tribe-events-photo-event {
+    float: left;
+    width: 29.2%;
+    height:320px;
+    margin: 0 4% 30px 0;
+    padding: 0;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1024px) {
+  #tribe-events-photo-events .type-tribe_events.tribe-events-photo-event {
+    width: 44%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #tribe-events-photo-events .type-tribe_events.tribe-events-photo-event {
+    float: none;
+    width: 100%;
+    height:100%;
+  }
+}
