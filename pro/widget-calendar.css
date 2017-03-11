@@ -31,16 +31,23 @@
 
 .home-featured-events .event-widget-container {
 	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:-webkit-box;
 	display:flex;
 	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
+	    -webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	-ms-flex-pack:justify;
-	    justify-content:space-between;
+	    -webkit-justify-content:space-between;
+	        -webkit-box-pack:justify;
+	        justify-content:space-between;
 }
 
 .home-featured-events .type-tribe_events {
 	-ms-flex: 1 0 275px;
-	    flex: 1 0 275px;
+	    -webkit-flex: 1 0 275px;
+	        -webkit-box-flex: 1;
+	        flex: 1 0 275px;
 }
 
 .home-featured-events .tribe-mini-calendar-event {
@@ -94,6 +101,8 @@
 @media only screen and (min-width: 961px) and (max-width:1201px) {
 	.home-featured-events .type-tribe_events {
 	-ms-flex: 0 1 430px;
-	    flex: 0 1 430px;
+	    -webkit-flex: 0 1 430px;
+	        -webkit-box-flex: 0;
+	        flex: 0 1 430px;
 	}
 }

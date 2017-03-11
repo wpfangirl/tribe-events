@@ -44,6 +44,7 @@ global $post;
 				<?php echo tribe_events_event_schedule_details(); ?>
 			</div>
 		</div><!-- .tribe-events-event-meta -->
+
 		<div class="vcard adr location"><!--Add venue, city, region, country to view-->
 			<?php if ( tribe_get_venue() != '' ): ?>
 				<span class="fn org tribe-venue"><?php echo tribe_get_venue_link(); ?></span><br />
