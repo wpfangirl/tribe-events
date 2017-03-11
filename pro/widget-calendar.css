@@ -1,0 +1,99 @@
+/* Custom Styles for Events Calendar Widget */
+
+.tribe-mini-calendar-event {
+	border-bottom: 1px solid #efefef;
+}
+
+.tribe-mini-calendar-event .list-info {
+  line-height:1.25;
+}
+
+.sidebar-primary .tribe-mini-calendar-event .list-info h2,
+.sidebar-primary .tribe-mini-calendar-event .list-info h2 a {	
+  font-family: 'Open Sans Condensed', 'Lato', Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight:bold;
+	line-height:24px;
+	margin-top: 0;
+	margin-bottom: 10px;
+  padding:0;
+}
+
+.sidebar-primary .duration,
+.sidebar-primary .vcard {
+  margin-top:4px;
+  margin-bottom: 4px;
+}
+
+.home-featured-events .wrap {
+	padding:20px;
+}
+
+.home-featured-events .event-widget-container {
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack:justify;
+	    justify-content:space-between;
+}
+
+.home-featured-events .type-tribe_events {
+	-ms-flex: 1 0 275px;
+	    flex: 1 0 275px;
+}
+
+.home-featured-events .tribe-mini-calendar-event {
+	border-bottom:none;
+	padding:10px;
+}
+
+
+.home-featured-events .tribe-events-widget-link {
+  clear: both;
+  text-align: right;
+  padding-top: 12px;
+  border-top: 1px solid #dedede;
+}
+
+.home-featured-events .list-info h2 {
+  font-size:20px;
+  font-weight: 700;
+}
+
+.entry-image.attachment-tribe_events {
+	margin: 10px 0 0;
+	width: 100%;
+}
+
+.tribe-mini-calendar-event .tribe-events-event-image {
+  margin-top:6px;
+  margin-bottom:6px;
+}
+
+.tribe-mini-calendar-event .list-info { 
+  font-size: 15px;
+  width:100%;
+}
+
+.duration.venue {
+  margin-bottom:12px;
+}
+
+.tribe-mini-calendar-event .list-info h2,
+.tribe-mini-calendar-event .list-info h2 a {	
+	font-family: 'Open Sans Condensed,' 'Lato', Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight:bold;
+	line-height:24px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding:0;
+}
+
+@media only screen and (min-width: 961px) and (max-width:1201px) {
+	.home-featured-events .type-tribe_events {
+	-ms-flex: 0 1 430px;
+	    flex: 0 1 430px;
+	}
+}
