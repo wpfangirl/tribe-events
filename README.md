@@ -29,7 +29,7 @@ Adds additional price information to the single event page. Removes event catego
 
 ### `pro`
 
-This folder contains the files for modifying anything in Events Calendar Pro, which includes some parts of widgets plus the Photo View.
+This folder contains the files for modifying anything in Events Calendar Pro (widgets & photo view).
 
 #### `related-events.php`
 
@@ -45,21 +45,11 @@ Flexbox styles for the horizontal widget, plus some styling for the vertical wid
 
 #### `pro/widgets/`
 
-Files for modifying the advanced list widget that ships with Events Calendar Pro. *If you use Events Calendar Pro, use these files for modifying your list widget.*
+Files for modifying the advanced list widget that ships with Events Calendar Pro. 
 
 ##### `pro/widgets/list-widget.php`
-Adds a container div around the events to make it possible to use Flexbox or CSS Grid to display them. Note that I've used the same container div in both the free widget file (`widget/list-widget.php`) and here. This template includes the code for displaying posts according to the advanced list widget's filters, and that one does not. 
+Adds a container div around the events to make it possible to use Flexbox or CSS Grid to display them. 
 
 ##### `pro/widgets/modules/single-event.php`
 
 Removes large list date display. Adds additional price information.
-
-### `widget`
-
-This folder contains files for modifying the default list widget (the one that ships with the free version of The Events Calendar). *If you only have the free version of The Events Calendar, use these files to modify your widget.*
-
-#### `list-widget.php`
-Adds a container div around the events in order to make it possible to use Flexbox or CSS Grid to display them.
-
-#### `modules/single-event.php`
-Adds custom featured image to widget. Removes the large date display. Adds additional pricing info.
