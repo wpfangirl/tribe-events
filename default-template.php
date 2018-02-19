@@ -26,7 +26,7 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action('genesis_loop','genesis_tribe');
 function genesis_tribe(){
 ?>
-<div id="tribe-events-pg-template">
+<div id="tribe-events-pg-template" class="tribe-events-pg-template">
 	<?php tribe_events_before_html(); ?>
 	<?php tribe_get_view(); ?>
 	<?php tribe_events_after_html(); ?>
