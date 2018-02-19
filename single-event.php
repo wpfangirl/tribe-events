@@ -45,7 +45,7 @@ $event_id = get_the_ID();
 			</span>
 		<?php } ?>
 	</div>
-			<div class="vcard adr location">
+		<div class="vcard adr location">
 			<?php if ( tribe_get_venue() != '' ): ?>
 				<span class="fn org tribe-venue"><?php echo tribe_get_venue_link(); ?>, </span>
 			<?php endif ?>
