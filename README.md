@@ -53,3 +53,10 @@ Adds a container div around the events to make it possible to use Flexbox or CSS
 ##### `pro/widgets/modules/single-event.php`
 
 Removes large list date display. Adds additional price information.
+
+### `pro/photo/`
+Files for modifying the photo view in Events Calendar Pro.
+
+#### `pro/photo/single-event.php`
+
+Modifies image size to `event-thumbnail`. Removes content/excerpt. Add venue, city, region, and country.
