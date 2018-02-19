@@ -30,7 +30,7 @@ if ( is_array( $posts ) && ! empty( $posts ) ) {
 	foreach ( $posts as $post ) {
 		echo '<li>';
 
-		$thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'event-medium' ) : '<img src="' . trailingslashit( TribeEventsPro::instance()->pluginUrl ) . 'resources/images/tribe-related-events-placeholder.png" alt="' . get_the_title( $post->ID ) . '" />';;
+		$thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'event-thumbnail' ) : '<img src="' . trailingslashit( TribeEventsPro::instance()->pluginUrl ) . 'resources/images/tribe-related-events-placeholder.png" alt="' . get_the_title( $post->ID ) . '" />';;
 		echo '<div class="tribe-related-events-thumbnail">';
 		echo '<a href="' . tribe_get_event_link( $post ) . '" class="url" rel="bookmark">' . $thumb . '</a>';
 		echo '</div>';
