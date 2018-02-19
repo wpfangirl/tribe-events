@@ -5,7 +5,7 @@
  *
  * You can recreate an ENTIRELY new related events view by doing a template override, and placing
  * a related-events.php file in a tribe-events/pro/ directory within your theme directory, which
- * will override the /views/related-events.php.
+ * will override the /views/pro/related-events.php.
  *
  * You can use any or all filters included in this file or create your own filters in
  * your functions.php. In order to modify or extend a single filter, please see our
@@ -21,28 +21,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $posts = tribe_get_related_posts();
 
-?>
+if ( is_array( $posts ) && ! empty( $posts ) ) : ?>
 
+<h3 class="tribe-events-related-events-title"><?php printf( __( 'Related %s', 'tribe-events-calendar-pro' ), tribe_get_event_label_plural() ); ?></h3>
+
+<ul class="tribe-related-events tribe-clearfix">
+	<?php foreach ( $posts as $post ) : ?>
+	<li>
+		<?php $thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'event-thumbnail' ) : '<img src="' . esc_url( trailingslashit( Tribe__Events__Pro__Main::instance()->pluginUrl ) . 'src/resources/images/tribe-related-events-placeholder.png' ) . '" alt="' . esc_attr( get_the_title( $post->ID ) ) . '" />'; ?>
+		<div class="tribe-related-events-thumbnail">
+			<a href="<?php echo esc_url( tribe_get_event_link( $post ) ); ?>" class="url" rel="bookmark"><?php echo $thumb ?></a>
+		</div>
+		<div class="tribe-related-event-info">
+			<h3 class="tribe-related-events-title"><a href="<?php echo tribe_get_event_link( $post ); ?>" class="tribe-event-url" rel="bookmark"><?php echo get_the_title( $post->ID ); ?></a></h3>
+			<?php
+				if ( $post->post_type == Tribe__Events__Main::POSTTYPE ) {
+					echo tribe_events_event_schedule_details( $post );
+				}
+			?>
+		</div>
+	</li>
+	<?php endforeach; ?>
+</ul>
 <?php
-if ( is_array( $posts ) && ! empty( $posts ) ) {
-	echo '<h3 class="tribe-events-related-events-title">' . __( 'Related Events', 'tribe-events-calendar-pro' ) . '</h3>';
-	echo '<ul class="tribe-related-events tribe-clearfix hfeed vcalendar">';
-	foreach ( $posts as $post ) {
-		echo '<li>';
-
-		$thumb = ( has_post_thumbnail( $post->ID ) ) ? get_the_post_thumbnail( $post->ID, 'event-thumbnail' ) : '<img src="' . trailingslashit( TribeEventsPro::instance()->pluginUrl ) . 'resources/images/tribe-related-events-placeholder.png" alt="' . get_the_title( $post->ID ) . '" />';;
-		echo '<div class="tribe-related-events-thumbnail">';
-		echo '<a href="' . tribe_get_event_link( $post ) . '" class="url" rel="bookmark">' . $thumb . '</a>';
-		echo '</div>';
-		echo '<div class="tribe-related-event-info">';
-		echo '<h3 class="tribe-related-events-title summary"><a href="' . tribe_get_event_link( $post ) . '" class="url" rel="bookmark">' . get_the_title( $post->ID ) . '</a></h3>';
-
-		if ( $post->post_type == TribeEvents::POSTTYPE ) {
-			echo tribe_events_event_schedule_details( $post );
-		}
-		echo '</div>';
-		echo '</li>';
-	}
-	echo '</ul>';
-}
-?>
+endif;
