@@ -50,6 +50,10 @@
 	        flex: 1 0 275px;
 }
 
+.home-featured-events .type-tribe_events:last-child {
+	margin-right: auto;
+}
+
 .home-featured-events .tribe-mini-calendar-event {
 	border-bottom:none;
 	padding:10px;
