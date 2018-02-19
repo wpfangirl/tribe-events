@@ -9,7 +9,7 @@
  *
  * When the template is loaded, the following vars are set:
  *
- * @version 4.1.1
+ * @version 4.4.21
  *
  * @var string $start
  * @var string $end
@@ -39,27 +39,28 @@ $posts = tribe_get_list_widget_events();
 $link_to_all = tribe_events_get_list_widget_view_all_link( $instance );
 
 // Check if any posts were found.
-if ( isset( $posts ) && $posts ) : ?>
-<div class="event-widget-container">
-	<?php foreach ( $posts as $post ) :
-		setup_postdata( $post );
-		do_action( 'tribe_events_widget_list_inside_before_loop' ); ?>
+if ( isset( $posts ) && $posts ) :
+	echo '<div class="event-widget-container">';
+		foreach ( $posts as $post ) :
+			setup_postdata( $post );
+			do_action( 'tribe_events_widget_list_inside_before_loop' ); ?>
 
-		<!-- Event  -->
-		<div class="<?php tribe_events_event_classes() ?>">
-			<?php tribe_get_template_part( 'pro/widgets/modules/single-event', null, $instance ) ?>
-		</div>
+			<!-- Event  -->
+			<div class="<?php tribe_events_event_classes() ?>">
+				<?php tribe_get_template_part( 'pro/widgets/modules/single-event', null, $instance ) ?>
+			</div>
 
-		<?php do_action( 'tribe_events_widget_list_inside_after_loop' ) ?>
+			<?php do_action( 'tribe_events_widget_list_inside_after_loop' ) ?>
 
-
-	<?php endforeach ?>
-	</div><!--event-widget-container -->
+		<?php endforeach ?>
+	</div><!-- .event-widget-container -->
+	<?php if ( ! empty( $link_to_all ) ) : ?>
 	<p class="tribe-events-widget-link">
 		<a href="<?php esc_attr_e( esc_url( $link_to_all ) ) ?>" rel="bookmark">
-			<?php esc_html_e( 'View More&hellip;', 'tribe-events-calendar-pro' ) ?>
+			<?php esc_html_e( 'View More&gt;', 'tribe-events-calendar-pro' ) ?>
 		</a>
 	</p>
+	<?php endif; ?>
 
 <?php
 // No Events were found.
