@@ -3,10 +3,10 @@
  * Photo View Single Event
  * This file contains one event in the photo view
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/pro/photo/single_event.php
+ * Override this template in your own theme by creating a file at [your-theme]/tribe-events/pro/photo/single-event.php
  *
  * @package TribeEventsCalendar
- *
+ * @version 4.4.8
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +21,7 @@ global $post;
 
 <div class="tribe-events-photo-event-wrap">
 
-	<?php echo tribe_event_featured_image( null, 'event-large' ); ?>
+	<?php echo tribe_event_featured_image( null, 'event-thumbnail' ); ?>
 
 	<div class="tribe-events-event-details tribe-clearfix">
 
