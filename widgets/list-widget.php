@@ -70,7 +70,7 @@ if ( $posts ):
 		</div><!-- .hentry .vevent -->
 
 		<?php do_action( 'tribe_events_widget_list_inside_after_loop' ) ?>
-		</div>
+		</div><!-- event-widget-container -->
 	<?php endforeach ?>
 
 	<p class="tribe-events-widget-link">
